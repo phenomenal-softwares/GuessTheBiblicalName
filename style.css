@@ -208,7 +208,7 @@ body{
 
 /* Modal Content */
 .modal-content {
-  background-image: url('/bg.jpg');
+  background-image: url('bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -306,7 +306,7 @@ body{
     margin-bottom: -3px;
   }
   .modal-content {
-  background-image: url('/bg.jpg');
+  background-image: url('bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   }

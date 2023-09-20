@@ -267,6 +267,11 @@ body{
 }
 
 @media screen and (max-width: 460px) {
+  body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
   .wrapper {
     width: 100%;
   }

@@ -305,4 +305,9 @@ body{
   .details .hint, .details .wrong-letter, .details .guess-left, .details .question{
     margin-bottom: -3px;
   }
+  .modal-content {
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
 }

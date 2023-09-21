@@ -133,7 +133,7 @@ let wordList = [
     },
     {
         word: "eliphaz",
-        hint: "the son of Esau (Genesis 34:4)"
+        hint: "the son of Esau (Genesis 36:4)"
     },
     {
         word: "elisabeth",

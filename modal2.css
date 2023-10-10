@@ -1,0 +1,96 @@
+/* The Modal (background) */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 3em; /* Location of the box */
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content2 {
+  background-color: #002300;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  border: 5px solid white;
+  border-radius: 20px 0 20px 0;
+  width: 90%;
+  height: 60vh;
+  z-index: -2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-header2{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.modal-body2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  color: white;
+}
+.modal-body2::first-letter {
+  text-transform: uppercase;
+}
+.answerQuotes {
+  position: absolute;
+  text-align: right;
+  top: 12em;
+  left: 9em;
+  color: yellow;
+  width: 50%;
+}
+.modal-footer2 {
+  position: absolute;
+  top: 24em;
+  left: 8em;
+}
+
+.next-btn{
+  color: #002300;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: rgba(249,249,249,0.718);
+  transition: all 0.3s ease;
+}
+.next-btn:active{
+  background: #fff;
+  color: #c05b02;
+  border: 2px solid #9a1bb2;
+}
+#correctImg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}

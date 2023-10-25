@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/study.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="w3-container">
+ <div class="scroll">
+   <!-- search box -->
+   <div class="search">
+      <input type="search" name="search" id="search" />
+      <span onclick="search()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </span>
+    </div>
+   <!-- search display -->
+   <div id="searchDisplay">
+     
+   </div>
+   <div id="randomDisplay">
+      <p id="word">word</p>
+     <p>Meaning: <span id="meaning"></span>
+      </p>
+     <p>Origin: <span id="origin"></span>
+      </p>
+     <p id="hint"></p>
+      </div>
+        <div onclick="randomWord()" class="randomButtonArea">
+      <button class="randomButton">
+        <i class="fa-solid fa-shuffle"></i>
+      </button>
+    </div>
+ </div>
+    
+    
+    <script src="js/words.js"></script>
+    <script src="js/study.js"></script>
+  </body>
+</html>

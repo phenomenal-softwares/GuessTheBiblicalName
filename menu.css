@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Amita';
+}
+body{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#menuBox{
+  position: relative;
+  background-image: url('menu.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  font-size: 30px;
+  top: -25em;
+  transition: all 1s;
+}
+#bibleVerse{
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  line-height: 1;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+#menuContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+  gap: 1em;
+}
+.menuList {
+  background: none;
+  border: none;
+  font-weight: 600;
+  transition: all 0.5s;
+  text-shadow: -1px 1px 0 white,
+  1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+.menuList:hover{
+  font-size: 35px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.6);
+}
+#start{
+  position: absolute;
+}
+#startBtn{
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  color: green;
+  background-color: rgba(255,255,255,0.6);
+  padding: 10px;
+  font-weight: 600;
+  animation: blinkColor 2s infinite linear;
+}
+#startBtn:hover {
+  font-size: 30px;
+}
+#difficulty, #difficultyModal{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  gap: 1.2em;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+#difficulty p, #difficultyModal p {
+  font-weight: 600;
+}
+#difficulty > p, #difficultyModal > p {
+  margin-top: 10%;
+  font-size: 16px;
+  text-shadow: -1px 1px 0 white,
+  1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+#difficulty div, #difficultyModal div {
+  border-radius: 20px;
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 5px 5px;
+}
+#difficulty div:hover, #difficultyModal div:hover{
+  box-shadow: 0px 0px;
+}
+.regular{
+  background-color: rgba(0,128,0,0.4);
+  color: white;
+}
+.regular:hover{
+  border: 5px solid white;
+}
+.experienced{
+  background-color: rgba(255,215,0,0.4);
+}
+.experienced:hover{
+  border: 5px solid black;
+} 
+#menuBack{
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  margin-top: 10%;
+}
+#menuBack:hover{
+  color: white;
+}
+
+#modalContainer{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 8em; /* Location of the box */
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+#difficultyModal{
+  position: absolute;
+  top: 0;
+  animation: slideDown 1s;
+}
+.regStart{
+  background-color: rgba(0,128,0,1);
+  color: white;
+}
+.regStart:hover{
+  border: 5px solid white;
+}
+.expStart{
+  background-color: rgba(255,215,0,1);
+  box-shadow: 5px 5px green!important;
+}
+.expStart:hover{
+  border: 5px solid green;
+  box-shadow: 0px 0px;
+}
+
+@keyframes blinkColor {
+  from{
+    color: green;
+    rgba(255,255,255,0.6);
+  }
+  to{
+    color: yellow;
+    background-color: rgba(0,128,0,0.6);
+  }
+}
+@keyframes slideDown{
+  from{
+    top: -30em;
+  }
+  to {
+    top: 0;
+  }
+}

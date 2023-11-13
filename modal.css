@@ -1,0 +1,281 @@
+/* The Modal (background) */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 8em; /* Location of the box */
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+  background-image: url('ansbg1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #4e2700;
+  border: 5px solid gold;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+  height: 55vh;
+  z-index: -2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-header2{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.modal-body2 {
+  width: 70%;
+  text-align: center;
+  margin-top: 0;
+  margin-left: 4em;
+  color: black;
+  font-size: 12px;
+}
+#meaningBox{
+  line-height: 1;
+}
+#bibleVerse2{
+  line-height: 1;
+  border-top: 1px solid black;
+  padding-top: 5px;
+}
+#bibleVerse2::first-letter {
+  text-transform: uppercase;
+}
+.answerQuotes {
+  position: absolute;
+  text-align: center;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 20px;
+  top: 65%;
+  left: 28%;
+  font-size: 12px;
+  padding: 3px;
+  color: yellow;
+  text-shadow: -0.5px 0.5px 0 black,
+  0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black;
+  width: 40%;
+}
+.modal-footer2 {
+  position: absolute;
+  top: 83%;
+  right: 2%;
+}
+
+.next-btn{
+  color: #002300;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: rgba(249,249,249,0.718);
+  transition: all 0.3s ease;
+}
+.next-btn:active{
+  background: #fff;
+  color: #c05b02;
+  border: 2px solid #9a1bb2;
+}
+#correctImg {
+  position: absolute;
+  left: 0;
+  bottom: -1%;
+  z-index: -1;
+}
+
+/* End game confirmation Modal */
+.modal3 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 3em; /* Location of the box */
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.2s;
+  animation-name: fadeIn;
+  animation-duration: 0.2s
+}
+
+/* Modal Content */
+.modal-content3 {
+  background-color: #002300;
+  position: fixed;
+  bottom: 5em;
+  margin: auto;
+  padding: 10px;
+  border: 5px solid crimson;
+  border-radius: 20px 0 20px 0;
+  width: 100%;
+  height: 20vh;
+  z-index: -2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.2s;
+  animation-name: slideIn;
+  animation-duration: 0.2s
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 5em; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 5em; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+.modal-body3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: yellow;
+  font-size: 16px;
+}
+
+.modal-footer3 {
+  width: 100%;
+}
+
+.end-btn, .return-btn{
+  color: white;
+  width: 40%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.end-btn{
+  margin-left: 20px;
+  background: rgba(220,20,60,0.8);
+}
+.return-btn{
+  background: rgba(0,128,0,0.8);
+}
+.end-btn:hover, .return-btn:hover{
+  background: #fff;
+  color: #c05b02;
+  border: 2px solid #9a1bb2;
+}
+
+/* The Modal (background) */
+#usernameModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 30%; /* Location of the box */
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#userName {
+  background-image: url('user.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: gold;
+  font-size: 12px;
+  border: 5px solid gold;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+#userName p {
+  font-weight: 800;
+  color: gold;
+  width: 70%;
+  margin-left: 30%;
+  text-shadow: -1px 1px 0 green,
+  1px 1px 0 green, 1px -1px 0 green, -1px -1px 0 green;
+}
+#usernameInput{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  border: 2px solid green;
+  color: green;
+  background-color: gold;
+  padding: 5px;
+  text-align: center;
+}
+#usernameInput::placeholder {
+  color: green;
+}
+#saveNameBtn{
+  color: gold;
+  background-color: green;
+  border-radius: 20px;
+  border: none;
+  padding: 7px;
+}
+#saveNameBtn:hover {
+  color: green;
+  background-color: gold;
+  border: 2px solid green;
+}

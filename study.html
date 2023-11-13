@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="study.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="w3-container">
+    <p class="info">Tap the golden apron to display random name</p>
+    <!-- search box -->
+      <div class="search-box">
+    <button onclick="search()" class="btn-search"><i class="fas fa-search"></i></button>
+    <input type="text" id="search" class="input-search" placeholder="Type to Search...">
+  </div>
+  <!-- back button -->
+  <button onclick="location.replace('menu.html')" class="btn-back"><i class="fa-solid fa-left-long"></i></button>
+
+ <div onclick="randomWord()" class="scroll">
+   <!-- search display -->
+   <div id="searchDisplay">
+     
+   </div>
+   <div id="randomDisplay">
+      <p id="word">word</p>
+     <p>Meaning: <span id="meaning"></span>
+      </p>
+     <p>Origin: <span id="origin"></span>
+      </p>
+     <p id="hint"></p>
+      </div>
+    
+ </div>
+    
+    
+    <script src="js/words.js"></script>
+    <script src="js/study.js"></script>
+  </body>
+</html>

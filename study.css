@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Audiowide';
+}
+body{
+  display: block;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.info {
+  position: absolute;
+  color: gold;
+  font-size: 12px;
+  left: 10%;
+  animation: blink 1s infinite;
+}
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 4%;
+  left: 6%;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: green;
+  padding-right: 40px;
+  color: black;
+}
+.input-search::placeholder{
+  color: green;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: white;
+  background-color: transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus {
+  color: #743f00;
+}
+.btn-search:focus ~ .input-search{
+  width: 100%;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid green;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(0,128,0,0.3);
+  border-bottom: 1px solid green;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.btn-back{
+  position: absolute;
+  right: 6%;
+  top: 4%;
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  background-color: green;
+}
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: gold;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 50px 50px;
+  border-top: 30px solid green;
+  border-right: 5px solid green;
+  border-left: 5px solid green;
+  border-bottom: 5px solid green;
+  transition: all 0.5s;
+}
+
+#word{
+  text-transform: uppercase;
+  font-size: 20px;
+}
+#hint{
+  border-top: 1px solid green;
+}
+#hint::first-letter{
+  text-transform: uppercase;
+}
+#searchDisplay, #hint {
+  line-height: 1.1;
+}
+#searchDisplay{
+  text-transform: capitalize;
+}
+
+@keyframes blink {
+  0% {
+    color: gold;
+  }
+  100% {
+    color: white;
+  }
+}

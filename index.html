@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Home</title>
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+<div class="loading-overlay">
+    <div>
+  <img src="img/game-logo.jpg" alt="logo" width="100%" />
+</div>
+<div class="progress-container">
+<div class="progress">
+</div>
+</div>
+  </div>
+<div id="menuBox" class="w3-card">
+      <div id="bibleVerse">
+        WELCOME!
+      </div>
+      <div id="menuContainer">
+     <div onclick="document.location='app.html'" class="menuList">
+        PLAY GAME </div>
+      <div onclick="document.querySelector('.character-modal').style.display='flex'" class="menuList">
+       BIBLICAL NAMES </div>
+      <div onclick="document.querySelector('.names-of-God-modal').style.display='flex'" class="menuList">
+       NAMES OF GOD </div>
+   <div onclick="document.querySelector('.gods-and-idols-modal').style.display='flex'" class="menuList">
+        GODS AND IDOLS</div>
+   <div onclick="document.querySelector('.places-modal').style.display='flex'" class="menuList">
+        PLACES</div>
+   <div onclick="toggleExtras()" class="menuList">
+        EXTRAS
+    <span class="caret-icon">
+    <i class="fa-solid fa-caret-down"></i>
+    </span>
+   </div>
+   <div class="extras">
+    <div onclick="document.querySelector('.about-modal').style.display='flex'">
+        ABOUT</div>
+   <div onclick="document.location='mailto:abiodunojo453@gmail.com'">
+        CONTACT US</div>
+   <div>
+        RATE THE APP</div>
+   <div onclick="document.querySelector('.clear-modal').style.display='flex'">
+     CLEAR DATA
+   </div>
+   </div>
+   
+      </div>
+  </div>
+ <div class="character-modal">
+    <div class="top-area">
+    <!-- search box -->
+    <button onclick="document.querySelector('.character-modal').style.display='none'" class="btn-back"><i class="fa-solid fa-left-long"></i></button>
+  
+      <div class="search-box">
+    <input type="text" id="searchInput" class="input-search" placeholder="Type to Search...">
+  </div>
+  <button onclick="searchWord()" class="btn-search">
+    <i class="fas fa-search"></i></button>
+  </div>
+   <div class="info-area">
+    </div>
+   <button onclick="randomWord()" class="random-button">
+     <i class="fa-solid fa-shuffle"></i>
+   </button>
+    
+ </div>
+ <div class="names-of-God-modal">
+   <div class="top-area">
+    <!-- search box -->
+    <button onclick="document.querySelector('.names-of-God-modal').style.display='none'" class="btn-back"><i class="fa-solid fa-left-long"></i></button>
+  
+     <p>Names of God in the Bible</p>
+  </div>
+   <div class="body-area">
+     <div id="namesContainer"></div>
+   </div>
+   
+    
+ </div>
+<div class="gods-and-idols-modal">
+   <div class="top-area">
+    <!-- search box -->
+    <button onclick="document.querySelector('.gods-and-idols-modal').style.display='none'" class="btn-back"><i class="fa-solid fa-left-long"></i></button>
+  
+     <p>Pagan gods and idols</p>
+  </div>
+   <div class="body-area">
+     <div id="ancientGodsContainer"></div>
+   </div>
+   
+    
+ </div>
+ <div class="places-modal">
+   <div class="top-area">
+    <!-- search box -->
+    <button onclick="document.querySelector('.places-modal').style.display='none'" class="btn-back"><i class="fa-solid fa-left-long"></i></button>
+    <div class="text">Places</div>
+  
+      <div class="search-box">
+    <input type="text" id="searchBar" class="input-search" placeholder="Search places...">
+  </div>
+  </div>
+   <div class="places-body">
+    <div class="places-content">
+      <div class="content" id="place-list">
+      <!-- Places will be rendered here -->
+    </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <!-- Alphabet sidebar -->
+    </div>
+<!-- scroll to top button -->
+<a href="#place-list">
+  <button id="myBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+</a>
+
+  </div>
+   
+    
+ </div>
+ <div class="about-modal">
+   <div class="top-area">
+    <!-- search box -->
+    <button onclick="document.querySelector('.about-modal').style.display='none'" class="btn-back"><i class="fa-solid fa-left-long"></i></button>
+  
+     <p>About the app</p>
+  </div>
+   <div class="about-body">
+    <p>
+      Guess the Biblical Name™ is an app designed to help users in the study and mastery of the names mentioned in the Holy Bible
+    </p>
+    <p>
+      The app features an interactive game - a fun way of challenging users on their knowledge of the names in the Bible, as well as the meaning, origin and roles of each name
+    </p>
+    <p>
+      We hope this app helps you in the study - as well as the mastery - of the Word of God!
+    </p>
+    <p>
+      Please don't forget to write a review and rate us on Google Play. You can also contact us for any information. <br /> <br /> God bless you richly!
+    </p>
+    <small>- Phenomenal Productions</small>
+    </div>
+  </div>
+ <div class="clear-modal">
+   <div class="clear-body">
+    <p>Are you sure? <br />
+    This will erase all app data!
+    </p>
+    <div class="clear-buttons">
+      <button onclick="resetData()" class="clear-btn">
+        CLEAR DATA
+      </button>
+      <button onclick="document.querySelector('.clear-modal').style.display='none'" id="return-btn">
+        Return
+      </button>
+    </div>
+  </div>
+    
+ </div>
+ 
+    <script src="js/words.js"></script>
+    <script src="js/bible.js"></script>
+    <script src="js/places.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

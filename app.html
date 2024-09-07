@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GUESS THE BIBLICAL NAME | Phenomenal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="w3-container">
+ <span id="grtIcon"><i class="fa-solid fa-sun"></i></span>
+ <p id="greeting">
+ </p>
+ <p id="highestScoreTab">Highest <br />
+ Score: <br />
+ <span id="highestScore">0</span>
+ </p>
+  <div class="wrapper w3-container">
+    <div class="topPart">
+     <span class="score">2</span>
+     <span class="guess-left">3</span>
+     <span onclick="animateSmiley()" id="smiley">
+     <i class="fa-solid fa-face-meh"></i>
+   </span>
+   <span onclick="skipQuestion()" id="skipQuestion">
+     <i class="fa-solid fa-rotate-right"></i>
+   </span> 
+   <span onclick="fillComplete()" id="lightning">
+     <i class="fa-solid fa-bolt-lightning"></i>
+   </span>
+    <span onclick="fill()" id="hintBulb">
+      <span id="newBulb">
+      <i class="fa-solid fa-lightbulb"></i></span>
+    </span>
+      </div>
+  <div class="content">
+   <div id="topBG">
+     <!-- Progress bar -->
+<div id="progressContainer" class="w3-round-xlarge">
+  <div id="progressBar" class="question w3-container w3-round-xlarge w3-green w3-center" style="width:0;">
+    <span></span></div>
+</div>
+    <input type="text" class="typing-input" maxlength="1" disabled>
+        <div class="inputs"></div>
+ <div class="details">
+  <p class="hint"><span></span></p>
+<hr />
+      </div>
+      </div>
+   <div id="alphabet">
+      <input type="button" class="keys" value="a" />
+      <input type="button" class="keys" value="b" />
+      <input type="button" class="keys" value="c" />
+      <input type="button" class="keys" value="d" />
+      <input type="button" class="keys" value="e" />
+      <input type="button" class="keys" value="f" />
+      <input type="button" class="keys" value="g" />
+      <input type="button" class="keys" value="h" />
+      <input type="button" class="keys" value="i" />
+      <input type="button" class="keys" value="j" />
+      <input type="button" class="keys" value="k" />
+      <input type="button" class="keys" value="l" />
+      <input type="button" class="keys" value="m" />
+      <input type="button" class="keys" value="n" />
+      <input type="button" class="keys" value="o" />
+      <input type="button" class="keys" value="p" />
+      <input type="button" class="keys" value="q" />
+      <input type="button" class="keys" value="r" />
+      <input type="button" class="keys" value="s" />
+      <input type="button" class="keys" value="t" />
+      <input type="button" class="keys" value="u" />
+      <input type="button" class="keys" value="v" />
+      <input type="button" class="keys" value="w" />
+      <input type="button" class="keys" value="x" />
+      <input type="button" class="keys" value="y" />
+      <input type="button" class="keys" value="z" />
+  </div>
+    <button onclick="endGameConfirm()" class="reset-btn">END GAME</button>
+      </div>
+    </div>
+
+<!-- End game Modal -->
+<div id="endgameModal" class="endgame-modal">
+  <!-- Modal content -->
+  <div class="endgame-content w3-card">
+    <div class="endgame-crown">
+      <i class="fa-solid fa-crown fa-flip"></i>
+    </div>
+    <div id="finalScore">10</div>
+    <div class="endgame-body">
+      <p id="bibleVerse">Some text in the Modal Body</p>
+    </div>
+    <div class="endgame-buttons">
+     <button onclick="location.reload()" class="return-btn">RESTART GAME</button>
+     <button onclick="location.replace('index.html')" class="end-btn">MAIN MENU</button>
+    </div>
+  </div>
+  <div class="endgame-img">
+     <img id="endGame" src="img/user.png" alt="endGame" width="60%"/>
+   </div> 
+</div>
+
+<!-- The 2nd Modal for answers -->
+<div id="answerModal" class="answer-modal">
+  <!-- Modal content -->
+  <div class="modal-content2 animate__animated animate__bounceIn">
+    <div class="modal-header2">
+      <p id="word">ABSALOM</p>
+    </div>
+   <div class="modal-body2">
+    <p id="meaningBox">Meaning: "<span id="meaning">Father of peace</span>"
+    </p>
+   <p>Origin: <span id="origin">Hebrew</span>
+   </p>
+   <p id="bibleVerse2">Some text in the Modal Body</p>
+    </div>
+    <div class="modal-footer2">
+     <button onclick="document.querySelector('.answer-modal').style.display='none'" class="next-btn">NEXT>> </button>
+    </div>
+  </div>
+  <div class="correct-img">
+      <img id="correctImg" src="img/correct.png" alt="correct" width="60%"/>
+      <div class="answerQuotes">
+    <i class="fa-solid fa-quote-right fa-bounce"></i>
+   <p id="quoteText">I'm proud of you!</p>
+    </div>
+    </div>
+</div>
+
+<!-- The 3rd Modal to confirm end game -->
+<div class="confirm-modal">
+  <!-- Modal content -->
+  <div class="modal-content3">
+    <div class="modal-body3">
+      <p>Are you sure you want to end your current game? </p>
+    </div>
+    <div class="modal-footer3">
+     <button onclick="endGame()" class="end-btn">END</button>
+     <button onclick="closeModal()" class="return-btn">RETURN</button>
+    </div>
+  </div>
+
+</div>
+
+    <script src="js/words.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bible.js"></script>
+    <script src="js/quotes.js"></script>
+
+  </body>
+</html>

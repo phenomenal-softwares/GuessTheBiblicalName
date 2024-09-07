@@ -1,0 +1,347 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk';
+}
+
+body{
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #002300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 10px;
+  z-index: 2;
+}
+.progress-container {
+    height: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  .progress {
+    height: 1.8vh;
+    width: 0;
+    background-color: #002300;
+    border-radius: 20px;
+    transition: width 100ms linear;
+  }
+#menuBox{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #002300;
+  height: 48vh;
+  width: 80vw;
+  transition: all 0.5s;
+}
+#bibleVerse{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  height: 80px;
+  padding: 5px;
+  line-height: 1;
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+#menuContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.menuList {
+  color: white;
+  font-size: 16px;
+}
+.menuList:active{
+  transform: scale(2);
+}
+
+#menuBack{
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  margin-top: 10%;
+}
+#menuBack:hover{
+  color: white;
+}
+.extras {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: inherit;
+  align-items: inherit;
+  color: #b1ffb1;
+  font-size: 12px;
+}
+.extras div:active {
+  opacity: 0.5;
+}
+
+/* character modal */
+.character-modal, .names-of-God-modal, .gods-and-idols-modal, .places-modal, .about-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  gap: 20px;
+  background: #002300;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+.top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #005100;
+  height: 7vh;
+  width: 100%;
+  padding: 10px;
+}
+.btn-back, .btn-search {
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 10%;
+  border-radius: 50%;
+  color: #002300;
+  background: #b1ffb1;
+}
+.input-search{
+  border-style: none;
+  padding: 5px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  background-color: #b1ffb1;
+  text-align: center;
+  color: black;
+}
+.input-search::placeholder{
+  color: green;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.info-area {
+  text-align: center;
+  padding: 10px;
+}
+.word {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.hint{
+  border-top: 1px solid green;
+}
+.hint::first-letter{
+  text-transform: uppercase;
+}
+.random-button {
+  color: #002300;
+  background: #b1ffb1;
+  width: 20%;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}
+.random-button:active {
+  transform: scale(1.2);
+}
+
+/* names of God, gods and idols */
+.names-of-God-modal, .gods-and-idols-modal {
+  gap: 10px;
+}
+.places-modal {
+  gap: 2px;
+}
+.top-area p {
+  color: #b1ffb1;
+  font-size: 18px;
+  width: 80%;
+  font-weight: bold;
+}
+.top-area .text {
+  color: #b1ffb1;
+  font-size: 18px;
+  font-weight: bold;
+}
+.body-area {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding: 20px;
+  align-items: center;
+  overflow: scroll;
+}
+.name-container {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #d3f5d3;
+}
+.name-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+.name-meaning {
+  font-style: italic;
+  color: #555;
+}
+.name-description {
+  margin-top: 8px;
+  color: #444;
+}
+.name-reference {
+  margin-top: 5px;
+  color: #005100;
+  font-size: 14px;
+}
+
+.places-body {
+  display: flex;
+  justify-content: top;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+}
+.places-content {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding: 10px;
+  align-items: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+    .sidebar {
+      height: 100%;
+      width: 10%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow: scroll;
+    }
+ .sidebar a {
+      color: #b1ffb1;
+      text-decoration: none;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+    .sidebar a.active {
+      opacity: 1;
+    }
+#myBtn {
+  display: block;
+  position: fixed;
+  bottom: 15%;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #005100;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  opacity: 0.4;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.clear-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0,35,0,0.4);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+.clear-body {
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #002300;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.clear-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.clear-buttons button {
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  background: #fff;
+  width: 200px;
+  height: 40px;
+}
+.clear-buttons button:active {
+  opacity: 0.5;
+}
+.clear-btn {
+  color: crimson;
+}
+#return-btn {
+  color: #005100;
+}

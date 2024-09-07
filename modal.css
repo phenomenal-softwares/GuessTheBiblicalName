@@ -1,0 +1,275 @@
+.answer-modal, .confirm-modal, .endgame-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 50px;
+  z-index: 1; /* Sit on top */
+  top: 0;
+  text-align: center;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  padding: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+.endgame-modal {
+  gap: 10px;
+  background-color: rgba(0,0,0,0.6);
+}
+/* Modal Content */
+.modal-content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #704200;
+  border: 5px solid #0e2b0b;
+  border-radius: 20px;
+  padding: 15px;
+  width: 90vw;
+  height: 40vh;
+  z-index: 2;
+}
+
+.modal-header2{
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.modal-body2 {
+  text-align: center;
+  font-size: 12px;
+}
+#meaningBox{
+  line-height: 1;
+}
+#bibleVerse2{
+  line-height: 1;
+  border-top: 0.5px solid #fff;
+  padding-top: 5px;
+}
+#bibleVerse2::first-letter {
+  text-transform: uppercase;
+}
+
+.next-btn{
+  color: #002300;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: rgba(249,249,249,0.718);
+  transition: all 0.3s ease;
+}
+.next-btn:active{
+  background: #fff;
+  color: #c05b02;
+  border: 2px solid #9a1bb2;
+}
+.correct-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 20px;
+  z-index: 1;
+}
+#correctImg {
+  margin-bottom: -2%;
+}
+.answerQuotes {
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 40px 20px 20px 0;
+  font-size: 12px;
+  padding: 3px;
+  color: #704200;
+  width: 40%;
+}
+
+/* End game confirmation Modal */
+
+/* Modal Content */
+.modal-content3 {
+  background-color: #002300;
+  position: fixed;
+  bottom: 5em;
+  margin: auto;
+  padding: 10px;
+  border: 5px solid crimson;
+  border-radius: 20px 0 20px 0;
+  width: 100%;
+  height: 20vh;
+  z-index: -2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.2s;
+  animation-name: slideIn;
+  animation-duration: 0.2s
+}
+
+.modal-body3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: yellow;
+  font-size: 16px;
+}
+
+.modal-footer3 {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.end-btn, .return-btn{
+  color: white;
+  width: 40%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.end-btn{
+  background: rgba(220,20,60,0.8);
+}
+.return-btn{
+  background: rgba(0,128,0,0.8);
+}
+.end-btn:active, .return-btn:active{
+  opacity: 0.5;
+}
+
+/* endgame Modal */
+.endgame-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002300;
+  padding: 10px;
+  width: 90vw;
+  height: 60vh;
+  z-index: 2;
+}
+.endgame-crown {
+  font-size: 60px;
+  color: gold;
+}
+#finalScore{
+  color: #fff;
+  font-size: 50px;
+  border: 5px solid gold;
+  border-radius: 50%;
+  width: 30vw;
+  padding: 10px;
+}
+.endgame-body {
+  color: white;
+  font-size: 12px;
+}
+.endgame-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.end-btn, .return-btn{
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 70%;
+  transition: all 0.3s ease;
+}
+.end-btn{
+  background: rgba(220,20,60,0.8);
+}
+.return-btn{
+  background: rgba(0,128,0,0.8);
+}
+.end-btn:active, .return-btn:active{
+  opacity: 0.5;
+}
+
+/* The Modal (background) */
+#usernameModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 30%; /* Location of the box */
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#userName {
+  background-image: url('user.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: gold;
+  font-size: 12px;
+  border: 5px solid gold;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+#userName p {
+  font-weight: 800;
+  color: gold;
+  width: 70%;
+  margin-left: 30%;
+  text-shadow: -1px 1px 0 green,
+  1px 1px 0 green, 1px -1px 0 green, -1px -1px 0 green;
+}
+#usernameInput{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  border: 2px solid green;
+  color: green;
+  background-color: gold;
+  padding: 5px;
+  text-align: center;
+}
+#usernameInput::placeholder {
+  color: green;
+}
+#saveNameBtn{
+  color: gold;
+  background-color: green;
+  border-radius: 20px;
+  border: none;
+  padding: 7px;
+}
+#saveNameBtn:hover {
+  color: green;
+  background-color: gold;
+  border: 2px solid green;
+}
